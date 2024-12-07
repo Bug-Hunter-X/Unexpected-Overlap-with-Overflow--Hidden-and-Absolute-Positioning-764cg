@@ -1,0 +1,24 @@
+The solution involves adjusting the z-index property:
+
+```css
+.container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: lightblue;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.content {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 280px;
+  height: 180px;
+  background-color: lightcoral;
+  z-index: 1; /* Added z-index to bring to front */
+}
+```
+
+By setting `z-index: 1` for the `.content` div, we ensure it is rendered on top of its parent, and the `overflow: hidden` property on the parent correctly clips the content as expected.
