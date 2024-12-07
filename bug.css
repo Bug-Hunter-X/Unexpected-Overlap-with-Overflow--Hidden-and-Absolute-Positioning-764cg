@@ -1,0 +1,20 @@
+The following CSS code snippet causes an unexpected layout issue in some browsers.  The `div` with the class `container` unexpectedly overlaps with the `div` with the class `content`, despite having separate positioning and `overflow` properties set:
+
+```css
+.container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: lightblue;
+  overflow: hidden;
+}
+
+.content {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 280px;
+  height: 180px;
+  background-color: lightcoral;
+}
+```
